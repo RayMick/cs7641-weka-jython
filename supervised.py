@@ -37,7 +37,7 @@ data = Instances(file)
 # set the class Index - the index of the dependent variable
 data.setClassIndex(data.numAttributes() - 1)
 
-# create the models,put them in a classifier list and train them
+# create the models and put them in a classifier list
 my_classifiers = []
 mlp = MultilayerPerceptron()
 my_classifiers.append(mlp)
