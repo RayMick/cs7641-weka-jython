@@ -15,14 +15,14 @@ Sample output:
 ------------------------------------
 MultilayerPerceptron
 
-Correctly Classified Instances         148               98.6667 %
-Incorrectly Classified Instances         2                1.3333 %
-Kappa statistic                          0.98  
-Mean absolute error                      0.0248
-Root mean squared error                  0.0911
-Relative absolute error                  5.5779 %
-Root relative squared error             19.3291 %
-Total Number of Instances              150     
+Correctly Classified Instances         148               98.6667 %  
+Incorrectly Classified Instances         2                1.3333 %  
+Kappa statistic                          0.98   
+Mean absolute error                      0.0248  
+Root mean squared error                  0.0911  
+Relative absolute error                  5.5779 %  
+Root relative squared error             19.3291 %  
+Total Number of Instances              150  
 
 ------------------------------------
 J48
