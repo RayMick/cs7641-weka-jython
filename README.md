@@ -1,6 +1,6 @@
 
-Sample Framework for using jython with WEKA machine learning toolkit
-for supervised learning classifiers
+Sample code for using jython with WEKA machine learning toolkit
+for supervised learning classifiers on the iris dataset.
 
 To run on linux, execute the script supervised.sh
 
