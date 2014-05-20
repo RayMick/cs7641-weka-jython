@@ -4,15 +4,15 @@ for supervised learning classifiers on the iris dataset.
 
 
 Requirements:
-java must be in path
-jython package should be installed.  For example:  apt-get install jython
+java must be in path  
+jython package should be installed.  For example:  apt-get install jython  
 
 
 To run on linux, execute the script supervised.sh
 
-For example:  
-chmod 755 supervised.sh  
-./supervised.sh
+For example:   
+chmod 755 supervised.sh   
+./supervised.sh  
 
 Weka v3.6.11 is included
 
