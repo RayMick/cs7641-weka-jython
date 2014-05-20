@@ -13,6 +13,8 @@ import weka.classifiers.meta.AdaBoostM1 as AdaBoostM1
 import weka.classifiers.functions.MultilayerPerceptron as MultilayerPerceptron
 import weka.classifiers.Evaluation as Evaluation
 import weka.core.Range as Range
+import weka.core.SelectedTag as SelectedTag
+import weka.core.Tag as Tag
 
 """
 A simple example of using Weka classifiers from within Jython.
@@ -46,6 +48,8 @@ my_classifiers.append(j48)
 boost = AdaBoostM1()
 my_classifiers.append(boost)
 svm = LibSVM()
+tag = SelectedTag("1",svm.TAGS_KERNELTYPE)  # 0 = linear, 1 = polynomial, 2 = radial basis function, 3 = sigmoid
+svm.setKernelType(tag)
 my_classifiers.append(svm)
 
 # train classifiers
