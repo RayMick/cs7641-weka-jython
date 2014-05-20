@@ -4,7 +4,7 @@ for supervised learning classifiers on the iris dataset.
 
 To run on linux, execute the script supervised.sh
 
-For example:
+For example:  
 chmod 755 supervised.sh  
 ./supervised.sh
 
