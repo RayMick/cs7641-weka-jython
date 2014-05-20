@@ -3,7 +3,7 @@ Sample code for using jython with WEKA machine learning toolkit
 for supervised learning classifiers on the iris dataset.
 
 
-Requirements:
+Requirements:  
 java must be in path  
 jython package should be installed.  For example:  apt-get install jython  
 
