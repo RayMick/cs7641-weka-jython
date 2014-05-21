@@ -4,6 +4,7 @@ import java.io.FileReader as FileReader
 import java.lang.String as String
 import java.lang.StringBuffer as StringBuffer
 import java.lang.Boolean as Boolean
+import java.util.Random as Random
 
 import weka.core.Instances as Instances
 import weka.classifiers.trees.J48 as J48
@@ -57,7 +58,7 @@ print "Training classifiers..."
 for obj in my_classifiers :
    obj.buildClassifier(data)
 
-# evaluate classifiers and print a result summary
+# evaluate classifiers and print a result summary including confusion matrix
 my_evaluations = []
 for obj in my_classifiers :
    evaluation = Evaluation(data)
@@ -69,8 +70,26 @@ for obj in my_classifiers :
    print "------------------------------------"
    print obj.__class__.__name__
    print evaluation.toSummaryString()
+   confusion_matrix = evaluation.confusionMatrix()  # confusion matrix
+   print "Confusion Matrix:"
+   for l in confusion_matrix:
+       print '** ', ','.join('%2d'%int(x) for x in l)
+
+# Example K fold cross validate model against training data
+# NOTE:  This should be done against test data not training data.
+print "Cross validation with 10 folds"
+for index in range(len(my_classifiers)):
+   evaluation = my_evaluations[index]
+   classifier = my_classifiers[index]
+   rand = Random(1)
+   buffer = StringBuffer()             # buffer for the predictions
+   attRange = Range()                  # no additional attributes output
+   outputDistribution = Boolean(False) # we don't want distribution
+   evaluation.crossValidateModel(classifier, data, 10, rand, [buffer, attRange, outputDistribution])
 
 # example to collect an individual statistic for all evaluated classifiers
+print "------------------------------------"
+print "Example to collect an individual statistic for all evaluated classifiers"
 print "Kappa"
 for index in range(len(my_classifiers)):
    evaluation = my_evaluations[index]
