@@ -26,7 +26,7 @@ import weka.core.Tag as Tag
 A simple example of using Weka classifiers from within Jython.
 See algo_keys variable for list of classifiers used.
 Code depends on a classifier having a buildClassifier() method
-K-Nearest Neighbor does not so it not included.
+K-Nearest Neighbor does not so it is not included.
 
 Commandline parameter(s):
 
