@@ -1,7 +1,8 @@
 
-Sample code for using jython with WEKA machine learning toolkit
-for supervised learning classifiers on the iris dataset.
+Sample code for using jython with WEKA machine learning toolkit  
+for supervised learning classifiers on the iris dataset.  
 
+Examples for both Weka 3.6 and 3.7.  3.7 seems to be more robust.  
 
 Requirements:  
 java must be in path  
