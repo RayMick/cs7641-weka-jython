@@ -2,7 +2,7 @@
 Sample code for using jython with WEKA machine learning toolkit  
 for supervised learning classifiers on the iris dataset.  
 
-Examples for both Weka 3.6 and 3.7.  3.7 seems to be more robust.  
+Examples for both Weka 3.6 and 3.7.   
 
 Requirements:  
 java must be in path  
@@ -15,7 +15,7 @@ For example:
 chmod 755 supervised.sh   
 ./supervised.sh  
 
-Weka v3.6.11 is included
+Weka v3.6.11 and v3.7.11 are included
 
 Sample output:
 
