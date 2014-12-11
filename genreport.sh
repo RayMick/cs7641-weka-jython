@@ -10,4 +10,5 @@ do
     latex sample/$dataset.latex
     bibtex sample/$dataset.aux
     pdflatex sample/$dataset.latex
+    mv $dataset* sample
 done
