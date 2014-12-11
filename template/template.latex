@@ -1,0 +1,71 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[margin=0.5in,bottom=.45in,top=.45in]{geometry}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage[font={small}]{caption}
+\usepackage{mdframed}
+\newcommand{\tab}{\hspace*{2em}}
+\begin{document}
+\title{Project 1: CS 7641}
+\author{My Name, My Email}
+
+\maketitle
+\graphicspath{ { image/ } }
+
+\section*{Introduction}
+
+\section*{Data acquisition}
+
+\subsection*{Dataset}
+
+\section*{Tools Used and Methodology}
+
+\section*{K-Nearest Neighbors}
+
+\includegraphics[scale=0.26]{image/k_nearest_neighbor_tunable_splice2_rmse.png}
+
+\includegraphics[scale=0.26]{image/k_nearest_neighbor_splice20_instances.png}
+\includegraphics[scale=0.26]{image/k_nearest_neighbor_splice21_instances.png}
+
+\section*{Decision trees with pruning}
+
+\includegraphics[scale=0.05]{image/j48_tree_splice2.png}
+
+\includegraphics[scale=0.26]{image/j48_tree_tunable_splice2_rmse.png}
+
+\includegraphics[scale=0.26]{image/j48_tree_splice20_instances.png}
+\includegraphics[scale=0.26]{image/j48_tree_splice21_instances.png}
+
+\section*{Boosting}
+
+\includegraphics[scale=0.26]{image/ada_boost_tunable_splice2_rmse.png}
+\includegraphics[scale=0.26]{image/ada_boost_tunable_splice2_wall.png}
+
+\includegraphics[scale=0.26]{image/ada_boost_splice20_instances.png}
+\includegraphics[scale=0.26]{image/ada_boost_splice21_instances.png}
+
+\section*{Neural Networks}
+
+\includegraphics[scale=0.26]{image/neural_network_tunable_splice2_rmse.png}
+\includegraphics[scale=0.26]{image/neural_network_tunable_splice2_wall.png}
+
+\includegraphics[scale=0.26]{image/neural_network_splice20_instances.png}
+\includegraphics[scale=0.26]{image/neural_network_splice21_instances.png}
+
+\section*{Support Vector Machines}
+
+\includegraphics[scale=0.26]{image/support_vector_machine_tunable_splice2_rmse.png}
+
+\includegraphics[scale=0.26]{image/support_vector_machine_splice20_instances.png}
+\includegraphics[scale=0.26]{image/support_vector_machine_splice21_instances.png}
+
+
+\section*{Conclusion}
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{Master}
+\end{document}
