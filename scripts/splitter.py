@@ -51,7 +51,7 @@ testset.setClassIndex(testset.numAttributes() - 1)
 
 saver = ArffSaver()
 saver.setInstances(testset)
-testsetfile = "./data/files/" + dataname + "-" + "test.arff"
+testsetfile = "./data/split/" + dataname + "-" + "test.arff"
 file = File(testsetfile)
 saver.setFile(file)
 saver.writeBatch()
@@ -59,7 +59,7 @@ saver.writeBatch()
 trainset = Instances(data,0,limit)   # create training set
 saver = ArffSaver()
 saver.setInstances(trainset)
-trainsetfile = "./data/files/" + dataname + "-" + "train.arff"
+trainsetfile = "./data/split/" + dataname + "-" + "train.arff"
 file = File(trainsetfile)
 saver.setFile(file)
 saver.writeBatch()

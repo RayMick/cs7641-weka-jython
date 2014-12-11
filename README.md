@@ -2,75 +2,45 @@
 Sample code for using jython with WEKA machine learning toolkit  
 for supervised learning classifiers on the iris dataset.  
 
-Examples for both Weka 3.6 and 3.7.   
+Uses Weka 3.7.   
 
 Requirements:  
 java must be in path  
 jython package should be installed.  For example:  apt-get install jython  
+R is needed to generate plots
+Latex is needed to generate the latex report
 
+It is recommended you run through thie tutorial with the iris dataset
+before attempting to use your own dataset.  When using your own dataset,
+remove the iris.arff file and replace with your own .arff file.
 
-To run on linux, execute the script supervised.sh
+Run split.sh to split your data into a training and testing set. 
+For example:
+chmod 755 split.sh
+./split.sh
 
+This should create a split test and train dataset in the data/split directory.
+The data records are randomized prior to the split.  It is not recommeneded to 
+run the split multiple times as it will change your results.
+
+Run gendata.sh to generate plot data.
 For example:   
-chmod 755 supervised.sh   
-./supervised.sh  
+chmod 755 gendata.sh   
+./gendata.sh 
 
-Weka v3.6.11 and v3.7.11 are included
+This script runs each supervised learning algorithm simultanously as a background process.
+You need to check that the unix java processes terminate prior to moving on to the 
+plotting step
 
-Sample output:
+Run genplot.sh to generate plots
+For example:
+chmod 755 genplot.sh
+./genplot.sh
 
-------------------------------------
-MultilayerPerceptron
 
-Correctly Classified Instances         148               98.6667 %  
-Incorrectly Classified Instances         2                1.3333 %  
-Kappa statistic                          0.98   
-Mean absolute error                      0.0248  
-Root mean squared error                  0.0911  
-Relative absolute error                  5.5779 %  
-Root relative squared error             19.3291 %  
-Total Number of Instances              150  
-
-------------------------------------
-J48
-
-Correctly Classified Instances         147               98      %  
-Incorrectly Classified Instances         3                2      %  
-Kappa statistic                          0.97   
-Mean absolute error                      0.0233  
-Root mean squared error                  0.108  
-Relative absolute error                  5.2482 %  
-Root relative squared error             22.9089 %  
-Total Number of Instances              150  
-
-------------------------------------
-AdaBoostM1
-
-Correctly Classified Instances         144               96      %  
-Incorrectly Classified Instances         6                4      %  
-Kappa statistic                          0.94   
-Mean absolute error                      0.0587  
-Root mean squared error                  0.1359  
-Relative absolute error                 13.1994 %  
-Root relative squared error             28.8203 %  
-Total Number of Instances              150  
-
-------------------------------------
-LibSVM
-
-Correctly Classified Instances         148               98.6667 %  
-Incorrectly Classified Instances         2                1.3333 %  
-Kappa statistic                          0.98   
-Mean absolute error                      0.0089  
-Root mean squared error                  0.0943  
-Relative absolute error                  2      %  
-Root relative squared error             20      %  
-Total Number of Instances              150  
-
-Kappa  
-MultilayerPerceptron: 0.98  
-J48: 0.97  
-AdaBoostM1: 0.94  
-LibSVM: 0.98  
+Run genreport.sh to generate the latex pdf report
+For example:
+chmod 755 genreport.sh
+./genreport.sh
 
 ![alt tag](https://raw.githubusercontent.com/omscs-georgia-tech/cs7641-weka-jython/master/iris-draftman-display.png)
