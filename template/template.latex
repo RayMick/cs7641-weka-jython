@@ -24,6 +24,8 @@
 
 \section*{K-Nearest Neighbors}
 
+Find an optimal K by looking at the plot below.  Plug this value of K into the scripts. 
+
 \includegraphics[scale=0.26]{image/k_nearest_neighbor_tunable_@dataset@_rmse.png}
 
 \includegraphics[scale=0.26]{image/k_nearest_neighbor_@dataset@0_instances.png}
@@ -31,6 +33,7 @@
 
 \section*{Decision trees with pruning}
 
+Find an optimal confidence factor by looking at the below plot.  Plug this value into the script.
 \includegraphics[scale=0.05]{image/j48_tree_@dataset@.png}
 
 \includegraphics[scale=0.26]{image/j48_tree_tunable_@dataset@_rmse.png}
@@ -40,6 +43,8 @@
 
 \section*{Boosting}
 
+Find an optimal value for number of iterations and then plug it into the scripts
+
 \includegraphics[scale=0.26]{image/ada_boost_tunable_@dataset@_rmse.png}
 \includegraphics[scale=0.26]{image/ada_boost_tunable_@dataset@_wall.png}
 
@@ -48,6 +53,8 @@
 
 \section*{Neural Networks}
 
+Find an optimal value for number of epochs.  This can help avoid long run times.
+
 \includegraphics[scale=0.26]{image/neural_network_tunable_@dataset@_rmse.png}
 \includegraphics[scale=0.26]{image/neural_network_tunable_@dataset@_wall.png}
 
@@ -55,6 +62,8 @@
 \includegraphics[scale=0.26]{image/neural_network_@dataset@1_instances.png}
 
 \section*{Support Vector Machines}
+
+You need to find an optimal value of C and then plug it into the script.
 
 \includegraphics[scale=0.26]{image/support_vector_machine_tunable_@dataset@_rmse.png}
 
