@@ -43,6 +43,10 @@ if (not (len(sys.argv) == 3)):
 crossvalidate = sys.argv[2]
 rand = Random()              # seed from the system time
 
+# load properties
+p = Properties()
+p.load(open('./ml.properties'))
+
 # load data file
 print "Loading data..."
 trainfile = FileReader(sys.argv[1] + "-train.arff")

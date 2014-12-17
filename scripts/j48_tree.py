@@ -40,8 +40,6 @@ rand = Random()              # seed from the system time
 # load properties
 p = Properties()
 p.load(open('./ml.properties'))
-p.list()
-print p
 
 # load data file
 print "Loading data..."
