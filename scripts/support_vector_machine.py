@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+from pyjavaproperties import Properties
 
 import java.io.FileReader as FileReader
 import java.io.File as File
@@ -56,7 +57,7 @@ filelimit.write("instances,lineartest,lineartrain,polytest,polytrain,radialtest,
 logfile = "logs/" + classifiername + "_" + dataname + crossvalidate + ".log"
 log=open(logfile, 'w', bufsize) # open general log file
 
-for num in range(10,fulltrainset.numInstances(),50):
+for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
    trainset = Instances(fulltrainset,0,num)   # create training set
    trainset.setClassIndex(trainset.numAttributes() - 1)
 
@@ -67,11 +68,7 @@ for num in range(10,fulltrainset.numInstances(),50):
           algo = LibSVM()
           tag = SelectedTag(str(kerneltype),algo.TAGS_KERNELTYPE)  # 0 = linear, 1 = polynomial, 2 = radial basis function, 3 = sigmoid
           algo.setKernelType(tag)
-#          if kerneltype == 1:
-#              algo.setCost(65)
-#          else:
-#              algo.setCost(4)
-          algo.setCost(65)
+          algo.setCost(int(p['C']))
           algo.buildClassifier(trainset)
           evaluation = Evaluation(trainset)
           output = PlainText()  # plain text output for predictions

@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+from pyjavaproperties import Properties
 
 import java.io.FileReader as FileReader
 import java.io.File as File
@@ -59,7 +60,7 @@ timefilename = "data/plot/" + classifiername + "_" + dataname + crossvalidate + 
 timefile = open(timefilename, 'w', bufsize)
 timefile.write("instances,timetest,timetrain\n")
 
-for num in range(10,fulltrainset.numInstances(),50):
+for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
    trainset = Instances(fulltrainset,0,num)   # create training set 
    trainset.setClassIndex(trainset.numAttributes() - 1)
    log.write("---------------------------------\nTraining Set Size: " + str(trainset.numInstances()) + ", Test Set Size: " + str(testset.numInstances()) + ", Full data set size: " + str(fulltrainset.numInstances()) + "\n")

@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+from pyjavaproperties import Properties
 
 import java.io.FileReader as FileReader
 import java.io.File as File
@@ -82,7 +83,7 @@ cover = CoverTree()
 cover.setDistanceFunction(EuclideanDistance())  # only Euclidean Distance function
 tree_algorithms_instance.append(cover)
 
-for num in range(10,fulltrainset.numInstances(),50):
+for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
    filelimit.write(str(num))
    trainset = Instances(fulltrainset,0,num)   # create training set
    trainset.setClassIndex(trainset.numAttributes() - 1)

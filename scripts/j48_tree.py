@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+from pyjavaproperties import Properties
 
 import java.io.FileReader as FileReader
 import java.io.File as File
@@ -36,6 +37,12 @@ if (not (len(sys.argv) == 3)):
 crossvalidate = sys.argv[2]
 rand = Random()              # seed from the system time
 
+# load properties
+p = Properties()
+p.load(open('./ml.properties'))
+p.list()
+print p
+
 # load data file
 print "Loading data..."
 trainfile = FileReader(sys.argv[1] + "-train.arff")
@@ -57,7 +64,7 @@ filelimit.write("instances,pctincorrecttest,pctincorrecttrain\n")
 logfile = "logs/" + classifiername + "_" + dataname + crossvalidate + ".log"
 log=open(logfile, 'w', bufsize) # open general log file
 
-for num in range(10,fulltrainset.numInstances(),50):
+for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
    filelimit.write(str(num))
    trainset = Instances(fulltrainset,0,num)   # create training set 
    trainset.setClassIndex(trainset.numAttributes() - 1)
