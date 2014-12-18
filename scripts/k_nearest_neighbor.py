@@ -97,7 +97,7 @@ for num in range(int(p['knn.initial']),fulltrainset.numInstances(),(fulltrainset
       for dataset in [testset, fulltrainset]:
           algo = IBk()
           algo.setNearestNeighbourSearchAlgorithm(algoknn)  
-          algo.setKNN(10)
+          algo.setKNN(int(p['knn.K']))
           algo.buildClassifier(trainset)
           evaluation = Evaluation(trainset)
           output = PlainText()  # plain text output for predictions

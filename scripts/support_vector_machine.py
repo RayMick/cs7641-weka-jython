@@ -72,7 +72,7 @@ for num in range(int(p['svm.initial']),fulltrainset.numInstances(),(fulltrainset
           algo = LibSVM()
           tag = SelectedTag(str(kerneltype),algo.TAGS_KERNELTYPE)  # 0 = linear, 1 = polynomial, 2 = radial basis function, 3 = sigmoid
           algo.setKernelType(tag)
-          algo.setCost(int(p['C']))
+          algo.setCost(int(p['svm.C']))
           algo.buildClassifier(trainset)
           evaluation = Evaluation(trainset)
           output = PlainText()  # plain text output for predictions

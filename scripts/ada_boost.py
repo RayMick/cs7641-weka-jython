@@ -77,7 +77,7 @@ for num in range(int(p['adaboost.initial']),fulltrainset.numInstances(),(fulltra
        algo = AdaBoostM1()
        weaklearner = J48()
        algo.setClassifier(weaklearner)
-       algo.setNumIterations(100)
+       algo.setNumIterations(int(p['adaboost.iterations']))
        x = time.time()
        algo.buildClassifier(trainset)
        evaluation = Evaluation(trainset)

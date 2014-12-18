@@ -73,7 +73,7 @@ for num in range(int(p['mlp.initial']),fulltrainset.numInstances(),(fulltrainset
    timefile.write(str(num))
    for dataset in [testset, fulltrainset]:
        algo = MultilayerPerceptron()
-       algo.setTrainingTime(150)
+       algo.setTrainingTime(int(p['mlp.N']))
        x = time.time()
        algo.buildClassifier(trainset)
        evaluation = Evaluation(trainset)
