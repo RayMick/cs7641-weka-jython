@@ -87,7 +87,7 @@ cover = CoverTree()
 cover.setDistanceFunction(EuclideanDistance())  # only Euclidean Distance function
 tree_algorithms_instance.append(cover)
 
-for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
+for num in range(int(p['knn.initial']),fulltrainset.numInstances(),(fulltrainset.numInstances() / int(p['knn.numdatapoints']))):
    filelimit.write(str(num))
    trainset = Instances(fulltrainset,0,num)   # create training set
    trainset.setClassIndex(trainset.numAttributes() - 1)

@@ -61,7 +61,7 @@ filelimit.write("instances,lineartest,lineartrain,polytest,polytrain,radialtest,
 logfile = "logs/" + classifiername + "_" + dataname + crossvalidate + ".log"
 log=open(logfile, 'w', bufsize) # open general log file
 
-for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
+for num in range(int(p['svm.initial']),fulltrainset.numInstances(),(fulltrainset.numInstances() / int(p['svm.numdatapoints']))):
    trainset = Instances(fulltrainset,0,num)   # create training set
    trainset.setClassIndex(trainset.numAttributes() - 1)
 

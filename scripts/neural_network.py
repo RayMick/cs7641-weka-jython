@@ -64,7 +64,7 @@ timefilename = "data/plot/" + classifiername + "_" + dataname + crossvalidate + 
 timefile = open(timefilename, 'w', bufsize)
 timefile.write("instances,timetest,timetrain\n")
 
-for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
+for num in range(int(p['mlp.initial']),fulltrainset.numInstances(),(fulltrainset.numInstances() / int(p['mlp.numdatapoints']))):
    trainset = Instances(fulltrainset,0,num)   # create training set 
    trainset.setClassIndex(trainset.numAttributes() - 1)
    log.write("---------------------------------\nTraining Set Size: " + str(trainset.numInstances()) + ", Test Set Size: " + str(testset.numInstances()) + ", Full data set size: " + str(fulltrainset.numInstances()) + "\n")

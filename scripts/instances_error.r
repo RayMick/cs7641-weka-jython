@@ -4,7 +4,7 @@ data <- read.csv(args[1])
 cross = args[2]
 print(cross)
 
-plot_colors <- c("blue", "blue", "red", "red", "forestgreen", "forestgreen", "black", "black")
+plot_colors <- c("black", "black", "red", "red", "forestgreen", "forestgreen", "blue", "blue")
 
 png(args[2], 1024, 720)
 par(mar=c(4.5,4.5,2,1))

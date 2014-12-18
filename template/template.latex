@@ -8,7 +8,7 @@
 \usepackage{mdframed}
 \newcommand{\tab}{\hspace*{2em}}
 \begin{document}
-\title{Project 1: CS 7641}
+\title{Supervised Machine Learning Analysis}
 \author{My Name, My Email}
 
 \maketitle
@@ -22,56 +22,55 @@
 
 \section*{Tools Used and Methodology}
 
+A jython interface to Weka\cite{weka-2009} is used to generate the plots seen below
+
 \section*{K-Nearest Neighbors}
 
-Find an optimal K by looking at the plot below.  Plug this value of K into the scripts. 
+Find an optimal K by looking at the plot below.  Plug this value of K into ml.properties file. 
 
-\includegraphics[scale=0.26]{image/k_nearest_neighbor_tunable_@dataset@_rmse.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/k_nearest_neighbor_tunable_@dataset@_rmse.png}
 
-\includegraphics[scale=0.26]{image/k_nearest_neighbor_@dataset@0_instances.png}
-\includegraphics[scale=0.26]{image/k_nearest_neighbor_@dataset@1_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/k_nearest_neighbor_@dataset@0_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/k_nearest_neighbor_@dataset@1_instances.png}
 
 \section*{Decision trees with pruning}
 
-Find an optimal confidence factor by looking at the below plot.  Plug this value into the script.
-\includegraphics[scale=0.05]{image/j48_tree_@dataset@.png}
+Find an optimal confidence factor by looking at the below plot.  Plug this value into ml.properties file.
+\includegraphics[scale=0.05,natwidth=1024,natheight=720]{image/j48_tree_tunable_@dataset@_0.25.png}
 
-\includegraphics[scale=0.26]{image/j48_tree_tunable_@dataset@_rmse.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_tunable_@dataset@_rmse.png}
 
-\includegraphics[scale=0.26]{image/j48_tree_@dataset@0_instances.png}
-\includegraphics[scale=0.26]{image/j48_tree_@dataset@1_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_@dataset@0_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_@dataset@1_instances.png}
 
 \section*{Boosting}
 
-Find an optimal value for number of iterations and then plug it into the scripts
+Find an optimal value for number of iterations and then plug it into ml.properties file.
 
-\includegraphics[scale=0.26]{image/ada_boost_tunable_@dataset@_rmse.png}
-\includegraphics[scale=0.26]{image/ada_boost_tunable_@dataset@_wall.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_tunable_@dataset@_rmse.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_tunable_@dataset@_wall.png}
 
-\includegraphics[scale=0.26]{image/ada_boost_@dataset@0_instances.png}
-\includegraphics[scale=0.26]{image/ada_boost_@dataset@1_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_@dataset@0_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_@dataset@1_instances.png}
 
 \section*{Neural Networks}
 
-Find an optimal value for number of epochs.  This can help avoid long run times.
+Find an optimal value for number of epochs and set it in ml.properties file.  This can help avoid long run times.
 
-\includegraphics[scale=0.26]{image/neural_network_tunable_@dataset@_rmse.png}
-\includegraphics[scale=0.26]{image/neural_network_tunable_@dataset@_wall.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_tunable_@dataset@_rmse.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_tunable_@dataset@_wall.png}
 
-\includegraphics[scale=0.26]{image/neural_network_@dataset@0_instances.png}
-\includegraphics[scale=0.26]{image/neural_network_@dataset@1_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_@dataset@0_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_@dataset@1_instances.png}
 
 \section*{Support Vector Machines}
 
-You need to find an optimal value of C and then plug it into the script.
+You need to find an optimal value of C and then plug it into the ml.properties file.
 
-\includegraphics[scale=0.26]{image/support_vector_machine_tunable_@dataset@_rmse.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/support_vector_machine_tunable_@dataset@_rmse.png}
 
-\includegraphics[scale=0.26]{image/support_vector_machine_@dataset@0_instances.png}
-\includegraphics[scale=0.26]{image/support_vector_machine_@dataset@1_instances.png}
-
-
-\section*{Conclusion}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/support_vector_machine_@dataset@0_instances.png}
+\includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/support_vector_machine_@dataset@1_instances.png}
 
 
 \nocite{*}

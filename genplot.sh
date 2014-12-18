@@ -88,7 +88,7 @@ do
     R CMD BATCH "--args $dataset image/$(basename \"$dataset\" .csv\").png" scripts/ada_boost.r $LOGDIR/$(basename \"$dataset\" .csv\")_plot.log
 done
 
-# Generate png from file file
+# Generate png from file
 for dotfile in `ls image/*.dot`
 do
    dot -Tpng $dotfile > image/$(basename \"$dotfile\" .dot\").png

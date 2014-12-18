@@ -62,7 +62,7 @@ filelimit.write("instances,pctincorrecttest,pctincorrecttrain\n")
 logfile = "logs/" + classifiername + "_" + dataname + crossvalidate + ".log"
 log=open(logfile, 'w', bufsize) # open general log file
 
-for num in range(int(p['initial']),fulltrainset.numInstances(),int(p['step'])):
+for num in range(int(p['j48.initial']),fulltrainset.numInstances(),(fulltrainset.numInstances() / int(p['j48.numdatapoints']))):
    filelimit.write(str(num))
    trainset = Instances(fulltrainset,0,num)   # create training set 
    trainset.setClassIndex(trainset.numAttributes() - 1)
