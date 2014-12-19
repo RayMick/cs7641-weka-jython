@@ -2,6 +2,7 @@
 \usepackage[margin=0.5in,bottom=.45in,top=.45in]{geometry}
 \usepackage{natbib}
 \usepackage{graphicx}
+\usepackage{grffile}
 \usepackage{verbatim}
 \usepackage{color}
 \usepackage[font={small}]{caption}
@@ -37,7 +38,7 @@ Find an optimal K by looking at the plot below.  Plug this value of K into ml.pr
 
 Find an optimal confidence factor by looking at the below plot.  Plug this value into ml.properties file.  Once domain knowledge values have been set for all algorithms, re-run the data generation.
 
-\includegraphics[scale=0.05,natwidth=1024,natheight=720]{image/j48_tree_tunable_@dataset@_0.25.png}
+\includegraphics[scale=0.4,natwidth=1024,natheight=720]{image/j48_tree_tunable_@dataset@_0.25.png}
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_tunable_@dataset@_rmse.png}
 
