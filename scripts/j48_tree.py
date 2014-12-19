@@ -62,7 +62,7 @@ filelimit.write("instances,pctincorrecttest,pctincorrecttrain\n")
 logfile = "logs/" + classifiername + "_" + dataname + crossvalidate + ".log"
 log=open(logfile, 'w', bufsize) # open general log file
 
-for num in range(int(p['jtree.initial']),fulltrainset.numInstances(),(fulltrainset.numInstances() / int(p['jtree.numdatapoints']))):
+for num in range(int(p['j48.initial']),fulltrainset.numInstances(),(fulltrainset.numInstances() / int(p['j48.numdatapoints']))):
    filelimit.write(str(num))
    trainset = Instances(fulltrainset,0,num)   # create training set 
    trainset.setClassIndex(trainset.numAttributes() - 1)
@@ -70,6 +70,7 @@ for num in range(int(p['jtree.initial']),fulltrainset.numInstances(),(fulltrains
    for dataset in [testset, fulltrainset]:   
        algo = J48()
        algo.buildClassifier(trainset)
+       algo.setConfidenceFactor(float(p['j48.C']))
        evaluation = Evaluation(trainset)
        output = PlainText()  # plain text output for predictions
        output.setHeader(trainset)

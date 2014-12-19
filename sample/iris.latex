@@ -22,11 +22,11 @@
 
 \section*{Tools Used and Methodology}
 
-A jython interface to Weka\cite{weka-2009} is used to generate the plots seen below
+A jython interface to Weka\cite{weka-2009} is used to find error using different amounts of training data against a fixed test set.  This data is plotted using R and finally a latex report is generated.
 
 \section*{K-Nearest Neighbors}
 
-Find an optimal K by looking at the plot below.  Plug this value of K into ml.properties file. 
+Find an optimal K by looking at the plot below.  Plug this value of K into ml.properties file.  Once domain knowledge values have been set for all algorithms, re-run the data generation.
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/k_nearest_neighbor_tunable_iris_rmse.png}
 
@@ -35,7 +35,8 @@ Find an optimal K by looking at the plot below.  Plug this value of K into ml.pr
 
 \section*{Decision trees with pruning}
 
-Find an optimal confidence factor by looking at the below plot.  Plug this value into ml.properties file.
+Find an optimal confidence factor by looking at the below plot.  Plug this value into ml.properties file.  Once domain knowledge values have been set for all algorithms, re-run the data generation.
+
 \includegraphics[scale=0.05,natwidth=1024,natheight=720]{image/j48_tree_tunable_iris_0.25.png}
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_tunable_iris_rmse.png}
@@ -45,7 +46,7 @@ Find an optimal confidence factor by looking at the below plot.  Plug this value
 
 \section*{Boosting}
 
-Find an optimal value for number of iterations and then plug it into ml.properties file.
+Find an optimal value for number of iterations and then plug it into ml.properties file.  Once domain knowledge values have been set for all algorithms, re-run the data generation.
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_tunable_iris_rmse.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_tunable_iris_wall.png}
@@ -55,7 +56,7 @@ Find an optimal value for number of iterations and then plug it into ml.properti
 
 \section*{Neural Networks}
 
-Find an optimal value for number of epochs and set it in ml.properties file.  This can help avoid long run times.
+Find an optimal value for number of epochs and set it in ml.properties file.  This can help avoid long run times.  Once domain knowledge values have been set for all algorithms, re-run the data generation.
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_tunable_iris_rmse.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_tunable_iris_wall.png}
@@ -65,7 +66,7 @@ Find an optimal value for number of epochs and set it in ml.properties file.  Th
 
 \section*{Support Vector Machines}
 
-You need to find an optimal value of C and then plug it into the ml.properties file.
+You need to find an optimal value of C and then plug it into the ml.properties file.  Once domain knowledge values have been set for all algorithms, re-run the data generation.
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/support_vector_machine_tunable_iris_rmse.png}
 
