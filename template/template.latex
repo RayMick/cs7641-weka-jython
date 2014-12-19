@@ -31,6 +31,9 @@ Find an optimal K by looking at the plot below.  Plug this value of K into ml.pr
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/k_nearest_neighbor_tunable_@dataset@_rmse.png}
 
+
+Fixed test set evaluated against a variable training set size and also trained against itself.  Plot to the right uses 10 fold cross validation.
+
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/k_nearest_neighbor_@dataset@0_instances.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/k_nearest_neighbor_@dataset@1_instances.png}
 
@@ -42,6 +45,8 @@ Find an optimal confidence factor by looking at the below plot.  Plug this value
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_tunable_@dataset@_rmse.png}
 
+Fixed test set evaluated against a variable training set size and also trained against itself.  Plot to the right uses 10 fold cross validation.
+
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_@dataset@0_instances.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/j48_tree_@dataset@1_instances.png}
 
@@ -51,6 +56,8 @@ Find an optimal value for number of iterations and then plug it into ml.properti
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_tunable_@dataset@_rmse.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_tunable_@dataset@_wall.png}
+
+Fixed test set evaluated against a variable training set size and also trained against itself.  Plot to the right uses 10 fold cross validation.
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_@dataset@0_instances.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/ada_boost_@dataset@1_instances.png}
@@ -62,6 +69,8 @@ Find an optimal value for number of epochs and set it in ml.properties file.  Th
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_tunable_@dataset@_rmse.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_tunable_@dataset@_wall.png}
 
+Fixed test set evaluated against a variable training set size and also trained against itself.  Plot to the right uses 10 fold cross validation.
+
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_@dataset@0_instances.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/neural_network_@dataset@1_instances.png}
 
@@ -70,6 +79,8 @@ Find an optimal value for number of epochs and set it in ml.properties file.  Th
 You need to find an optimal value of C and then plug it into the ml.properties file.  Once domain knowledge values have been set for all algorithms, re-run the data generation.
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/support_vector_machine_tunable_@dataset@_rmse.png}
+
+Fixed test set evaluated against a variable training set size and also trained against itself.  Plot to the right uses 10 fold cross validation.
 
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/support_vector_machine_@dataset@0_instances.png}
 \includegraphics[scale=0.26,natwidth=1024,natheight=720]{image/support_vector_machine_@dataset@1_instances.png}

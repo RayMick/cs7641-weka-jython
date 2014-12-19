@@ -7,21 +7,22 @@ Uses Weka 3.7.
 Requirements:  
 java must be in path  
 jython package should be installed.  For example:  apt-get install jython  
-R is needed to generate plots  
-Latex is needed to generate the latex report  
+R is needed to generate plots.  For example: r-base (apt-get install r-base)  
+Graphviz is used to generate the tree graph for j48.  (apt-get install graphviz)  
+Latex is needed to generate the latex report. (apt-get install install texlive-full)   
+Bibtex is used for references.  (apt-get install texlive-bibtex-extra)  
 
-It is recommended you run through this tutorial with the iris dataset
-before attempting to use your own dataset.  When using your own dataset,
-remove the iris.arff file and replace with your own .arff file.
+It is recommended you run through this tutorial with the iris dataset before attempting to use your own dataset.
+When using your own dataset,  remove the iris.arff file and replace with your own .arff file.  It will process multiple .arff files in the data directroy into multiple reports.
 
 Run split.sh to split your data into a training and testing set.  
 For example:  
+```
 chmod 755 split.sh  
 ./split.sh  
+```
 
-This should create a split test and train dataset in the data/split directory.
-The data records are randomized prior to the split.  It is not recommended to 
-run the split multiple times as it will change your results.
+This should create a split test and train dataset in the data/split directory.  The data records are randomized prior to the split.  It is not recommended to run the split multiple times as it will change your results.
 
 Run gendata.sh to generate plot data.  
 For example:   
