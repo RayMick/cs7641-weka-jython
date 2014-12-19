@@ -18,7 +18,7 @@ Requirements (Sample for ubuntu installation given):
   * Bibtex is used for references.  (apt-get install texlive-bibtex-extra)  
 
 It is recommended you run through this tutorial with the iris dataset before attempting to use your own dataset.
-When using your own dataset,  remove the iris.arff file and replace with your own .arff file.  It will process multiple .arff files in the data directroy into multiple reports.
+When using your own dataset,  remove the iris.arff file and replace with your own .arff file.  It will process multiple .arff files in the data directory into multiple reports.
 
 Run split.sh to split your data into a training and testing set.  
 For example:  
