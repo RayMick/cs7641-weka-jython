@@ -9,7 +9,7 @@ Scripting framework that will perform the following tasks for a dataset in the w
 
 Uses Weka 3.7 which is included in the lib directory.   
 
-Requirements:  
+Requirements (Sample for ubuntu installation given):  
 java 1.7+ must be in path  
 jython package should be installed.  (apt-get install jython)  
 R is needed to generate plots.  (apt-get install r-base)  
@@ -56,4 +56,10 @@ chmod 755 genreport.sh
 
 Here are some sample images generated:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Visualizing a decision tree:
+
+![alt text](https://raw.githubusercontent.com/omscs-georgia-tech/cs7641-weka-jython/master/sample/j48_tree_tunable_iris2_0.25.png "Graphical Decision Tree")
+
+Finding an optimal K when using the K-Nearest Neighbors algorithm.
+
+![alt text](https://raw.githubusercontent.com/omscs-georgia-tech/cs7641-weka-jython/master/sample/k_nearest_neighbor_tunable_iris_rmse.png "Finding Optimal K")
