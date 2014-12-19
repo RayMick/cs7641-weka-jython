@@ -10,12 +10,12 @@ Scripting framework that will perform the following tasks for a dataset in the w
 Uses Weka 3.7 which is included in the lib directory.   
 
 Requirements (Sample for ubuntu installation given):  
-java 1.7+ must be in path  
-jython package should be installed.  (apt-get install jython)  
-R is needed to generate plots.  (apt-get install r-base)  
-Graphviz is used to generate the tree graph for j48.  (apt-get install graphviz)  
-Latex is needed to generate the latex report. (apt-get install install texlive-full)   
-Bibtex is used for references.  (apt-get install texlive-bibtex-extra)  
+  * java 1.7+ must be in path  
+  * jython package should be installed.  (apt-get install jython)  
+  * R is needed to generate plots.  (apt-get install r-base)  
+  * Graphviz is used to generate the tree graph for j48.  (apt-get install graphviz)  
+  * Latex is needed to generate the latex report. (apt-get install install texlive-full)   
+  * Bibtex is used for references.  (apt-get install texlive-bibtex-extra)  
 
 It is recommended you run through this tutorial with the iris dataset before attempting to use your own dataset.
 When using your own dataset,  remove the iris.arff file and replace with your own .arff file.  It will process multiple .arff files in the data directroy into multiple reports.
