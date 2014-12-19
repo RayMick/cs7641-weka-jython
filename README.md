@@ -1,15 +1,17 @@
 
 Scripting framework that will perform the following tasks for a dataset in the weka .arff file format:  
-..* Split data into a fixed test set (1/3) and training set (2/3)
-..* Evaluate data points
-..* Generate plots of data
-..* Create overall report that includes plots and references
+  * Split data into a fixed test set (1/3) and training set (2/3)
+  * Evaluate data points
+  * Generate plots of data
+  * Create overall report that includes plots and references
+
+[Here is a sample report](https://github.com/omscs-georgia-tech/cs7641-weka-jython/raw/master/sample/iris.pdf)
 
 Uses Weka 3.7 which is included in the lib directory.   
 
 Requirements:  
 java 1.7+ must be in path  
-jython package should be installed.  (apt-get install jython) 
+jython package should be installed.  (apt-get install jython)  
 R is needed to generate plots.  (apt-get install r-base)  
 Graphviz is used to generate the tree graph for j48.  (apt-get install graphviz)  
 Latex is needed to generate the latex report. (apt-get install install texlive-full)   
@@ -51,3 +53,7 @@ For example:
 chmod 755 genreport.sh  
 ./genreport.sh  
 ```
+
+Here are some sample images generated:
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
