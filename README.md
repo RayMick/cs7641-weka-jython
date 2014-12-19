@@ -1,13 +1,16 @@
 
-Sample code for using jython with WEKA machine learning toolkit  
-for supervised learning classifiers on the iris dataset.  
+Scripting framework that will perform the following tasks for a dataset in the weka .arff file format:  
+..* Split data into a fixed test set (1/3) and training set (2/3)
+..* Evaluate data points
+..* Generate plots of data
+..* Create overall report that includes plots and references
 
-Uses Weka 3.7.   
+Uses Weka 3.7 which is included in the lib directory.   
 
 Requirements:  
-java must be in path  
-jython package should be installed.  For example:  apt-get install jython  
-R is needed to generate plots.  For example: r-base (apt-get install r-base)  
+java 1.7+ must be in path  
+jython package should be installed.  (apt-get install jython) 
+R is needed to generate plots.  (apt-get install r-base)  
 Graphviz is used to generate the tree graph for j48.  (apt-get install graphviz)  
 Latex is needed to generate the latex report. (apt-get install install texlive-full)   
 Bibtex is used for references.  (apt-get install texlive-bibtex-extra)  
@@ -26,20 +29,25 @@ This should create a split test and train dataset in the data/split directory.  
 
 Run gendata.sh to generate plot data.  
 For example:   
+```
 chmod 755 gendata.sh   
 ./gendata.sh   
+```
 
-This script runs each supervised learning algorithm simultanously as a background process. 
+This script runs each supervised learning algorithm simultanously as a background process.  
 NOTE: You need to check that the unix java processes terminate prior to moving on to the 
 plotting step.
 
 Run genplot.sh to generate plots  
 For example:  
+```
 chmod 755 genplot.sh  
 ./genplot.sh  
+```
 
 Run genreport.sh to generate the latex pdf report  
 For example:  
+```
 chmod 755 genreport.sh  
 ./genreport.sh  
-
+```
